@@ -1,4 +1,3 @@
-
 // даём разумное имя для пина №9 со светодиодом
 // (англ. Light Emitting Diode или просто «LED»)
 // Так нам не нужно постоянно вспоминать куда он подключён
@@ -104,38 +103,43 @@ void loop()
 
 // наши задачи, внутри функций понятное дело может быть всё что угодно
 //1 кнопка
+
+// вариант на 4 - 64, 128, 191, 255
+// вариант на 5 - 51 102 153 204 255
+
 void task_0() {
   Serial.println("Task 0");
-  i = 10; //51 ВРЕМЕННО 
-  analogWrite(VIBRO_PIN, i); // убрано в 0, что бы не мешало // вариант на 4 - 64, 128, 191, 255
+  i = 51;
+  analogWrite(VIBRO_PIN, i);
+
 }
 
 void task_1()
 {
   Serial.println("Task 1");
   i = 102;
-  analogWrite(VIBRO_PIN, i); // убрано в 0, что бы не мешало
+  analogWrite(VIBRO_PIN, i);
 }
 
 void task_2()
 {
   Serial.println("Task 2");
   i = 153;
-  analogWrite(VIBRO_PIN, i); // убрано в 0, что бы не мешало
+  analogWrite(VIBRO_PIN, i);
 }
 
 void task_3()
 {
   Serial.println("Task 3");
   i = 204;
-  analogWrite(VIBRO_PIN, i); // убрано в 0, что бы не мешало
+  analogWrite(VIBRO_PIN, i);
 }
 
 void task_4()
 {
   Serial.println("Task 4");
-  i = 255;
-  analogWrite(VIBRO_PIN, i); // убрано в 0, что бы не мешало
+  i = 255; //255
+  analogWrite(VIBRO_PIN, i);
 }
 
 
@@ -153,7 +157,8 @@ void task_10()
 
 void task_11()
 {
-  Serial.println("Task 11");
+  Serial.print("Task 11  i=");
+  Serial.println (i);
 
   analogWrite(VIBRO_PIN, i);
   delay(900);
@@ -164,16 +169,36 @@ void task_11()
 
 void task_12()
 {
-  Serial.println("Task 12");
+  Serial.print("Task 12  i=");
+  Serial.println (i);
+
+  analogWrite(VIBRO_PIN, i);
+  delay(500);
+
+  analogWrite(VIBRO_PIN, 0);
+  delay(500);
 }
 
 void task_13()
 {
-  Serial.println("Task 13");
+  Serial.print("Task 13  i=");
+  Serial.println (i);
+
+  analogWrite(VIBRO_PIN, i);
+  delay(200);
+
+  analogWrite(VIBRO_PIN, 0);
+  delay(200);
 }
 
 void task_14()
 {
-  Serial.println("Task 14");
-}
+  Serial.print("Task 14  i=");
+  Serial.println (i);
 
+  analogWrite(VIBRO_PIN, i);
+  delay(300);
+
+  analogWrite(VIBRO_PIN, 0);
+  delay(300);
+}
